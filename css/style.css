@@ -1,0 +1,166 @@
+/* --- --- --- */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: Arial, Helvetica, serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #FFF;
+
+	background: #36B3F1;
+	background: linear-gradient(to top, #fefcea, #36B3F1);
+	outline: 2px solid red;
+}
+
+* { 
+	-webkit-user-select: none;
+	outline: none;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	margin: 0;
+	padding: 0 2px 2px 0;
+}
+
+
+/* --- --- --- */
+.smile {
+	cursor: pointer;
+	position: absolute;
+	background-repeat: no-repeat;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	-webkit-animation: smileRotation 6s infinite linear;
+	-moz-animation: smileRotation 6s infinite linear;
+	-o-animation: smileRotation 6s infinite linear;
+	animation: smileRotation 6s infinite linear;
+
+}
+@-webkit-keyframes smileRotation {0% {transform:rotate(-180deg);} 100% {-webkit-transform: rotate(180deg);}}
+@-moz-keyframes smileRotation {0% {transform:rotate(-180deg);} 100% {-moz-transform: rotate(180deg);}}
+@-o-keyframes smileRotation {0% {transform:rotate(-180deg);} 100% {-moz-transform: rotate(180deg);}}
+@keyframes smileRotation {0% {transform:rotate(-180deg);} 100% {transform:rotate(180deg);}}
+
+.killSmile {
+	-webkit-animation: killSmile 0.4s 1 linear;
+	-moz-animation: killSmile 0.4s 1 linear;
+	-o-animation: killSmile 0.4s 1 linear;
+	animation: killSmile 0.4s 1 linear;
+
+	opacity: 0;
+}
+@-webkit-keyframes killSmile {0% {opacity: 1; transform: scale(1);} 100% {opacity:0; transform: scale(0);}}
+@-moz-keyframes killSmile {0% {opacity: 1; transform: scale(1);} 100% {opacity:0; transform: scale(0);}}
+@-o-keyframes killSmile {0% {opacity: 1; transform: scale(1);} 100% {opacity:0; transform: scale(0);}}
+@keyframes killSmile {0% {opacity: 1; transform: scale(1);} 100% {opacity:0; transform: scale(0);}}
+
+
+/* --- --- --- */
+#main {
+	height: 100%;
+}
+
+#smilesContainer {
+	width: 300px;
+	height: 500px;
+	top: 80px;
+	border: 2px solid #000;	
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+
+
+/* --- --- --- */
+#progressbar {
+	width: 100%;
+	border-bottom: 1px solid #000;
+	background-color: #C5CC12;
+}
+
+#progressbar #progress {
+	background-color: #D0FF00;
+	width: 1px;
+}
+
+
+/* --- --- --- */
+#statistic {
+	position: relative;
+	padding: 10px;
+	border: 2px dotted #6170BB;
+	border-radius: 10px;
+	background-color: #7ABDDA;
+	margin: 4px;
+	display: inline-block;
+}
+
+#timer, #scores, #kills, #fails {
+	text-shadow: 2px 2px #666;
+}
+
+#timer { 
+	color: #B19A11;
+}
+
+#scores, #kills {
+	color: #F9E328;
+}
+
+#fails {
+	color: red;
+}
+
+
+/* --- --- --- */
+#sun {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+
+	background: url(../img/sun.png);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.shakeSun {
+	-webkit-animation: shakeSun 0.5s 1 linear;
+	-moz-animation: shakeSun 0.5s 1 linear;
+	-o-animation: shakeSun 0.5s 1 linear;
+	animation: shakeSun 0.5s 1 linear;
+}
+@-webkit-keyframes shakeSun {0% {width: 100%;} 100% {width: 101%}}
+@-moz-keyframes shakeSun {0% {width: 100%;} 100% {width: 101%}}
+@-o-keyframes shakeSun {0% {width: 100%;} 100% {width: 101%}}
+@keyframes shakeSun {0% {width: 100%;} 100% {width: 101%}}
+
+
+/* --- --- --- */
+#grass {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 76px;
+	background: url(../img/grass.png) 0 0 repeat-x;
+	z-index: 10;
+}
